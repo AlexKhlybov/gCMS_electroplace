@@ -1,0 +1,890 @@
+*
+	box-sizing: border-box
+
+body
+	background: #ffffff
+	font-family: Open Sans, sans-serif;
+	font-size: 16px
+	color: #000000
+	margin: 0
+	padding: 0
+	&.ofhidden
+		overflow: hidden
+
+.container
+	width: 1170px
+	margin: 0 auto	
+input, textarea
+	border-radius: 8px
+	border: 1px solid #DEDEE2
+	&:focus
+		outline: none
+		border: 1px solid #005AAB
+ul
+	list-style: none
+	padding: 0
+	margin: 0
+h1,h2,h3,h4,p
+	margin: 0
+a
+	transition: 0.1s linear
+	&:link,
+	&:visited
+		text-decoration: none
+fieldset
+	border: none
+	padding: 0
+	margin-bottom: 35px
+legend
+	font-weight: 600
+	line-height: 22px
+	margin-bottom: 25px
+select
+	border: 1px solid #DEDEE2
+	border-radius: 8px
+	height: 48px
+	width: 100%
+	padding: 12px
+	appearance: none
+	background: url('../img/select-arrow.svg') no-repeat right
+	background-position-x: calc(100% - 13px)
+	&:focus
+		outline: none
+	
+.section-title
+	font-family: Roboto, sans-serif
+	font-weight: bold
+	font-size: 32px
+	line-height: 37px
+	margin-bottom: 30px
+.visuality-hidden
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	border: 0
+	padding: 0
+	white-space: nowrap
+	clip-path: inset(100%)
+	clip: rect(0 0 0 0)
+	overflow: hidden
+.title-wrapper
+	display: flex
+	justify-content: space-between
+	align-items: center
+	margin-bottom: 30px
+
+.btn
+	background: #FFFFFF
+	border-radius: 8px
+	width: 210px
+	height: 48px
+	padding: 14px 24px
+	border: none
+	font-family: Open Sans, sans-serif;
+	font-size: 14px
+	line-height: 19px
+	text-align: center
+	transition: 0.1s linear
+	cursor: pointer
+	color: #000000
+	font-weight: 600
+	&:focus
+		outline: none
+	&:hover
+		background: #A4D4FF
+	&:active
+		background: #3086D5
+	&__stroke
+		width: 146px
+		height: 45px
+		border: 1px solid #005AAB
+		color: #005AAB
+		padding: 12px 24px 
+
+		&:hover
+			background: transparent
+			border: 1px solid #198AF0
+			color: #198AF0
+		&:active
+			border: 1px solid #00305A
+			color: #00305A
+	&__fill
+		background: #005AAB
+		color: #ffffff
+		&:hover
+			background: #198AF0
+		&:active
+			background: #003769							
+.header
+	&-top
+		background: #363636
+		font-size: 14px
+		line-height: 19px
+		a
+			color: #ffffff
+		&__list
+			display: flex
+		&__item
+			padding: 17px 15px
+			transition: 0.1s linear
+			&:last-child
+				margin-left: auto
+			&:hover
+				cursor: pointer
+				background: #5980A3
+			&:active
+				background: #284864
+	&-center
+		padding: 29px 0 30px
+		display: flex
+		justify-content: space-between
+		align-items: center
+		a
+			color: #000
+	&-search
+		position: relative
+		width: 621px
+		height: 48px
+		&__input
+			width: 100%
+			height: 100%
+			border-radius: 8px
+			border: 1px solid #DEDEE2
+			padding: 13px 3px 13px 46px
+			transition: 0.1s linear
+		&:before
+			content: url('../img/search-icon.svg')
+			position: absolute
+			left: 12px
+			top: 12px
+	&__fav,
+	&__cart
+		font-size: 14px
+		line-height: 19px
+		transition: 0.1s linear
+		&:hover
+			color: #005AAB
+	&__fav
+		position: relative
+		padding-left: 33px
+		&:before
+			content: url('../img/heart-icon1.svg')
+			position: absolute
+			left: 0
+			top: -2px
+			width: 24px
+			height: 24px
+	&__cart
+		position: relative
+		padding-left: 33px
+		&:before
+			content: url('../img/shopping-cart-icon.svg')
+			position: absolute
+			left: 0
+			top: -2px
+			width: 24px
+			height: 24px
+	&-nav
+		display: flex
+		align-items: center
+		justify-content: space-between
+		font-size: 14px
+		line-height: 19px
+		&__catalog
+			position: relative
+			width: 116px
+			padding-left: 45px
+			&:before
+				content: url('../img/menu-icon.svg')
+				position: absolute
+				top: 11px
+				left: 15px
+		&__list	
+			display: flex
+			align-items: center
+			justify-content: space-between
+			background: #F1F5F7
+			border-radius: 8px
+			padding: 0 15px
+		&__item
+			height: 45px
+			a
+				transition: 0.1s linear
+				display: inline-block
+				padding: 13px 12px
+				text-transform: uppercase
+				color: #000
+				&:hover
+					background: #DBEAF8
+				&:active
+					background: #99B0C5
+.main
+	font-family: Roboto, sans-serif
+	color: #fff
+	padding-top: 64px
+	&-wrapper
+		display: flex
+	&-offer
+		width: 270px
+		background: #363636
+		border-radius: 8px
+		padding: 30px
+		font-size: 22px
+		line-height: 26px
+		&__text
+			margin: 0 0 13px 0
+		&__img
+			margin-bottom: 13px
+		&__btn
+			display: block
+			margin: 0 auto
+.hits
+	padding-top: 70px
+.product-cards
+	display: flex
+	justify-content: space-between
+	flex-wrap: wrap
+	.product-card
+		position: relative
+		width: 270px
+		border: 1px solid #DEDEE2
+		border-radius: 8px
+		transition: 0.1s linear
+		margin-bottom: 30px
+		&:hover
+			border: 1px solid #005AAB
+			& a .product-card__name
+				color: #005AAB
+			& .product-card__cart
+				visibility: visible
+		&.new
+			&:before
+				content: url('../img/Lebel.svg')
+				position: absolute
+				top: 15px
+		&__fav-btn
+			border: none
+			background: transparent
+			position: absolute
+			right: 20px
+			top: 20px
+			&:hover
+				& path.stroke
+					fill: #005AAB
+			&:active
+				& path.fill
+					fill: #005AAB
+			&.active
+				path.fill
+					fill: #005AAB
+				path.stroke
+					fill: #005AAB
+		a
+			display: block
+			color: #000000
+			padding: 64px 35px 30px
+			.product-card__img
+				width: 200px
+				height: 200px
+				margin-bottom: 20px
+				object-fit: contain
+		&__name
+			line-height: 22px
+			height: 44px
+			transition: 0.1s linear
+			margin-bottom: 36px
+		&__prev-price
+			line-height: 22px
+			height: 22px
+			text-decoration-line: line-through
+			color: #7D868F
+		&__price
+			font-family: Roboto, sans-serif
+			font-weight: 500
+			font-size: 22px
+			line-height: 26px
+		&__cart
+			visibility: hidden
+			position: absolute
+			width: 40px
+			height: 40px
+			background: url('../img/shopping-cart-white.svg') center no-repeat #005AAB
+			border-radius: 4px
+			bottom: 30px
+			right: 30px
+			transition: 0.1s linear
+			&:hover
+				background-color: #198AF0
+			&:active
+				background-color: #003769
+.brands
+	padding-top: 73px
+	&-list
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr	1fr
+		grid-template-rows: 150px 150px
+		grid-column-gap: 30px
+		grid-row-gap: 30px
+		&__item
+			border: 1px solid #DEDEE2
+			border-radius: 8px
+			display: grid
+			justify-content: center
+			align-items: center
+			transition: 0.1s linear
+			&:hover
+				border: 1px solid #005AAB
+			&:active
+				border: 1px solid #003769
+.news
+	padding-top: 73px
+	padding-bottom: 80px
+	&-list
+		display: grid
+		grid-gap: 30px
+		grid-template-columns: repeat(3, 370px )
+		grid-template-rows: repeat(3, 170px )
+		&__item
+			display: flex
+			flex-direction: column
+			color: #fff
+			border-radius: 8px
+			padding: 30px
+			font-family: Roboto, sans-serif
+
+			.title
+				font-size: 22px
+				line-height: 26px
+				width: 320px
+				margin-bottom: 10px
+			.subtitle
+				line-height: 22px
+				width: 296px
+				margin-bottom: 30px
+			&:nth-child(1)
+				
+				grid-column: 1 / 3
+				grid-row: 1 / 3
+				background: url('../img/bloody.jpg') center no-repeat  #000 
+			&:not(:first-child)
+				.title
+					margin-bottom: 36px
+			&:nth-child(2)
+				background: url('../img/asus.jpg') center no-repeat #000
+			&:nth-child(3)
+				background: url('../img/acer.jpg') center no-repeat #000
+			&:nth-child(4)
+				background: url('../img/samsung.jpg') center no-repeat #000
+			&:nth-child(5)
+				background: url('../img/razer.jpg') center no-repeat #000
+			&:nth-child(6)
+				background: url('../img/redmond.jpg') center no-repeat #000
+.features
+	padding-top: 73px
+	background: #F1F5F7
+	padding-bottom: 77px
+	.section-title
+		margin-bottom: 41px
+	&-list
+		display: grid
+		grid-template-columns: 1fr 1fr 1fr
+		grid-gap: 30px
+		&__item
+			padding-top: 113px
+			background-size: 55px 55px
+			.title
+				line-height: 22px
+				margin-bottom: 20px
+			.text
+				line-height: 22px
+			&:nth-child(1)
+				background: url('../img/shopping-carticon2.svg') center no-repeat transparent
+				background-position: 0 10px
+			&:nth-child(2)
+				background: url('../img/sms-icon.svg') center no-repeat transparent
+				background-position: 0 10px
+			&:nth-child(3)
+				background: url('../img/shipped-icon.svg') center no-repeat transparent
+				background-position: 0 10px
+.contacts
+	padding-top: 70px
+	padding-bottom: 80px
+	.content
+		display: flex
+		.map
+			margin-right: 70px
+	&-list
+		margin-bottom: 30px
+
+		&__item
+			position: relative
+			margin-bottom: 30px
+			&:not(:last-child)
+				padding-left: 34px
+			&:first-child
+				&:before
+					content: url('../img/location-mark-icon.png')
+					position: absolute
+					left: 0
+			&:last-child
+				margin-bottom: 0
+				
+			&:nth-child(2)
+				&:before
+					content: url('../img/phone-icon.svg')
+					position: absolute
+					left: 0
+			&:nth-child(3)
+				margin-bottom: 40px
+				&:before
+					content: url('../img/time-icon.svg')
+					position: absolute
+					left: 0
+			a
+				color: #000
+			.title
+				margin-bottom: 10px
+				line-height: 22px
+.subscribe
+	padding-top: 53px
+	padding-bottom: 51px
+	background: #F1F5F7
+	&-wrapper
+		display: flex
+		justify-content: space-between
+		align-items: center
+	&__label
+		font-size: 22px
+		line-height: 26px
+		width: 370px
+		font-weight: bold
+	&-form
+		height: 48px
+		&__input
+			width: 440px
+			height: 100%
+			border: 1px solid #DEDEE2
+			border-radius: 8px
+			padding-left: 13px
+			margin-right: 15px
+.catalog
+	padding: 35px 0 100px
+	.breadcrumb
+		margin-bottom: 40px
+		ul
+			display: flex
+			align-items: center
+			li
+				position: relative
+				&:not(:last-child)
+					margin-right: 46px
+				
+					&:after
+						content: url('../img/select-arrow.svg')
+						position: absolute
+						right: -30px
+						transform: rotate(-90deg)
+				a
+					font-size: 14px
+					line-height: 19px
+					text-transform: uppercase
+					color: #7D868F
+					&:hover
+						color: #000000
+	.sorting
+		display: flex
+		align-items: center
+		border-bottom: 1px solid #DEDEE2
+		padding-bottom: 8px
+		margin-bottom: 45px
+		&__item
+			&:not(:last-child)
+				margin-right: 15px
+			&_quantity
+				font-weight: 500
+				font-size: 22px
+				line-height: 26px
+				color: #7D868F
+				width: 290px
+				span
+					color: #000
+			&_description
+				font-size: 14px
+				line-height: 19px
+				color: #7D868F
+			&_criteria
+				position: relative
+				font-size: 14px
+				line-height: 19px
+				padding-right: 20px
+				transition: 0.1s linear
+				button
+					border: none
+					background-color: transparent
+					cursor: pointer
+				&:before
+					content: url('../img/arrow-down.svg')
+					position: absolute
+					right: 5px
+					top: 0
+					opacity: 0
+				&:hover
+					button
+						color: #005AAB
+					&:before
+						opacity: 1 
+						transition: opacity 0.1s linear
+	&-wrapper
+		display: flex
+		justify-content: space-between
+	&-filters
+		width: 270px
+		.price-wrapper
+			display: flex
+			justify-content: space-between
+			align-items: center
+			margin-bottom: 15px
+
+			.separator
+				color: #DEDEE2
+				padding: 0
+				margin: 0
+		&__price
+			width: 121px
+			height: 48px
+			line-height: 22px
+			padding: 13px
+			-webkit-appearance: none
+
+		.noUi
+			&-target
+				background: #B6BCC2
+				border: none
+				box-shadow: unset
+				height: 1px
+				width: 250px
+			&-connect
+				background: #005AAB
+			&-handle
+				width: 18px
+				height: 18px
+				background: #005AAB
+				border-radius: 50%
+				box-shadow: unset
+				border: none
+				top: -9px
+				&:before, 
+				&:after
+					display: none
+
+		&__brand,
+		&__sim
+			display: flex
+			flex-direction: column
+			line-height: 22px
+			label
+				margin-bottom: 15px
+			input
+				margin-right: 10px
+		&__brand
+			input[type=checkbox]
+				opacity: 0
+				margin-right: 25px
+				&[disabled] + label
+					color: #7D868F
+					&:before
+						border-color: #DEDEE2
+				&:checked + label
+					&:before
+						background: #005AAB
+						border-color: #005AAB
+					&:after
+						content: url('../img/checked-checkbox.svg')
+						position: absolute
+						left: 4px
+			label
+				position: relative
+				margin-bottom: 5px
+				padding-left: 40px
+				&:hover
+					&:before
+						border-color: #005AAB
+				&:before
+					transition: 0.07s linear
+					content: ''
+					position: absolute
+					top: -2px
+					left: 0
+					width: 24px
+					height: 24px
+					box-sizing: border-box
+					border: 1px solid #DEDEE2
+					background: #ffffff
+					border-radius: 2px
+		&__sim
+			input[type=radio]
+				opacity: 0
+				margin-right: 25px
+				&[disabled] + label
+					color: #7D868F
+					&:before
+						border-color: #DEDEE2
+				&:checked + label
+					&:before
+						border-color: #005AAB
+					&:after
+						content: ''
+						width: 12px
+						height: 12px
+						border-radius: 50%
+						background: #005AAB
+						position: absolute
+						left: 6px
+						top: 4px
+			label
+				position: relative
+				margin-bottom: 5px
+				padding-left: 40px
+				box-sizing: border-box
+
+				&:hover
+					&:before
+						border-color: #005AAB
+						box-sizing: border-box
+
+				&:before
+					transition: 0.07s linear
+					content: ''
+					position: absolute
+					top: -2px
+					left: 0
+					width: 24px
+					height: 24px
+					border: 1px solid #DEDEE2
+					background: #ffffff
+					border-radius: 50%
+					box-sizing: border-box
+	&-results
+		width: 74%
+.footer
+	padding-top: 50px
+	background: #333333
+	color: #fff
+	section
+		.logo
+			margin-bottom: 43px
+		ul
+			li
+				margin-top: 10px
+				transition: 0.1s linear
+				&:hover a
+					color: #005AAB
+				a
+					
+					color: #fff
+					font-size: 14px
+					line-height: 19px
+	&-wrapper
+		display: grid
+		grid-template-columns: 270px 91px 135px 270px
+		grid-gap: 135px
+		padding-bottom: 50px
+	&-socials
+		display: flex
+		justify-content: space-between
+		align-items: flex-start
+		&__item
+			width: 60px
+			height: 60px
+			display: flex
+			justify-content: center
+			align-items: center
+			border: 1px solid #FFFFFF
+			border-radius: 8px
+			&:hover
+				background: #fff
+				svg
+					path
+						fill: #005AAB
+	&-copyright
+		border-top: 1px solid #585858
+		padding-top: 10px
+		padding-bottom: 10px
+		&-wrapper
+			display: flex
+			justify-content: space-between
+			align-items: center
+			&__left
+				font-size: 14px
+				line-height: 19px
+				a
+					color: #fff
+					&:hover
+						color: #005AAB
+			&__right
+				display: flex
+				.text
+					margin-right: 5px
+.pagination
+	display: flex
+	align-items: center
+	&__prev,
+	&__next
+		position: relative
+		box-sizing: border-box
+		width: 46px
+		height: 46px
+		background: url('../img/pagination-arrow.svg') center no-repeat #FFFFFF
+		border: 1px solid #DEDEE2
+		border-radius: 50%
+		transition: 0.1s linear
+		&:hover
+			border: 1px solid #005AAB
+			background: url('../img/pagination-arrow-hover.svg') center no-repeat #FFFFFF
+		&:active
+			border: 1px solid #005AAB
+			background: url('../img/pagination-arrow-active.svg') center no-repeat #FFFFFF
+	&__prev
+		transform: scale(-1)
+		margin-right: 30px
+	&__next
+		margin-left: 15px
+	&__page
+		width: 46px
+		height: 46px
+		border: 1px solid #DEDEE2
+		border-radius: 4px
+		display: flex
+		justify-content: center
+		align-items: center
+		&:not(:last-of-type)
+			margin-right: 15px
+		&_active
+			background: #005AAB
+			border: 1px solid #005AAB
+			color: #ffffff
+		&:hover
+			border: 1px solid #005AAB
+		&:active
+			border: 1px solid #003769
+.swiper-container
+	--swiper-theme-color: #fff
+	width: 870px
+	height: 360px
+	margin: 0
+	margin-right: 30px
+	.swiper-wrapper
+		.swiper-slide
+			a
+				figure
+					position: relative
+					margin: 0
+					p, h2
+						margin: 0
+						color: #ffffff
+					h2
+						margin-bottom: 10px
+					figcaption
+						position: absolute
+						top: 30px
+						left: 30px
+	.swiper-pagination-bullet
+		background: #9B9B9B
+	.swiper-button-prev,
+	.swiper-button-next
+		width: 46px
+		height: 46px
+		background: #fff
+		border-radius: 50%
+		transition: 0.1s linear
+		&:hover
+			background: #A4D4FF
+		&:active
+			background: #2273BC
+		&:after
+			content: url('../img/slider-arrow.svg')
+			color: #005AAB
+			width: 12px
+			height: 55px
+	.swiper-button-next
+		&:after
+			transform: rotate(180deg)
+.modal-dialog__backdrop
+	display: none
+	position: fixed
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	z-index: 3
+	background-color: rgba(0, 0, 0, 0.7)
+	&.active
+		display: block
+		body
+			overflow: hidden
+	.btn__close-modal
+		position: absolute
+		right: 30px
+		top: 30px
+		width: 24px
+		height: 24px
+		border: none
+		background: url('../img/close-icon-normal.svg') center no-repeat
+		cursor: pointer
+		&:hover
+			background: url('../img/close-icon-hover.svg') center no-repeat
+	.modal-wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		height: 100%
+	.add-to-cart-modal
+		display: none
+		position: relative
+		background: #ffffff
+		padding: 60px 50px
+		border-radius: 8px
+		&.modal-show
+			display: block
+		.section-title
+			margin-bottom: 55px
+		
+		.btn__fill,
+		.btn__stroke
+			width: 205px
+			
+			z-index: 4
+		.btn__fill
+			margin-right: 30px
+	.feedback-modal
+		display: none
+		position: relative
+		background: #ffffff
+		padding: 60px 50px
+		border-radius: 8px
+		width: 540px
+
+		&.modal-show
+			display: block
+		.section-title
+			margin-bottom: 25px
+		&__form
+			display: flex
+			flex-direction: column
+		&__input
+			margin-bottom: 30px
+			padding: 13px
+			&_textarea
+				max-width: 100%
+				max-height: 114px
+				overflow-x: auto
+		button[type=submit]
+			width: 100%
+		
+		
+	
+
+
+			
+
