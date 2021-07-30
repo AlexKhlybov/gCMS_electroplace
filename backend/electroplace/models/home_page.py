@@ -9,7 +9,7 @@ class HomePage(BasePage):
     email = models.CharField(max_length=100, verbose_name='E-mail', blank=True, default='', null=False)
     tabletime = models.CharField(max_length=100, verbose_name='Часы работы', blank=True, default='', null=False)
 
-    template = 'index.html'
+    template = 'pages/home_page.html'
 
     class Meta:
         verbose_name = "Главная"
