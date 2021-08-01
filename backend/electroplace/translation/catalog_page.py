@@ -4,4 +4,4 @@ from ..models import CatalogPage
 
 @register(CatalogPage)
 class CatalogPageTranslationOptions(TranslationOptions):
-    fields = ('address',)
+    pass

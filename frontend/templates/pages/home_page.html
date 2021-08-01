@@ -234,15 +234,15 @@
                 <ul class="contacts-list">
                     <li class="contacts-list__item">
                         <h4 class="title">Адрес</h4>
-                        <address class="text">{{ object.city }}, {{ object.address }}</address>
+                        <address class="text">г.{{ address.city }}, {{ address.address }}</address>
                     </li>
                     <li class="contacts-list__item">
                         <h4 class="title">Телефон</h4>
-                        <a  class="text" href="tel:{{ object.phone }}">8 (495) 444-888-5</a>
+                        <a  class="text" href="tel:{{ address.phone }}">8 (495) 444-888-5</a>
                     </li>
                     <li class="contacts-list__item">
                         <h4 class="title">График работы</h4>
-                        <p class="text">{{ object.tabletime }}</p>
+                        <p class="text">{{ address.tabletime }}</p>
                     </li>
                     <li class="contacts-list__item">
                         <button aria-label="Кнопка Написать нам" class="btn btn__fill btn__send">

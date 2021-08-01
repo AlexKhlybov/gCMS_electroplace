@@ -1,2 +1,3 @@
+from .contact_page import ContactPageTranslationOptions
 from .home_page import HomePageTranslationOptions
 from .catalog_page import CatalogPageTranslationOptions
