@@ -1,5 +1,4 @@
 from garpix_page.models import BasePage
-from django.db import models
 
 from .contact_page import ContactPage
 
