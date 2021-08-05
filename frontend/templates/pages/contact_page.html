@@ -3,5 +3,34 @@
 
 
 {% block content %}
-
+<section class="contacts">
+    <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <div class="content">
+            <div class="map">
+                <script  async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad72508a893ff8a62cb3a3262aa10230d9d2461efeebe2f367f99541fc70545f0&amp;width=670&amp;height=400&amp;lang=ru_RU&amp;scroll=false"></script>
+            </div>
+            <ul class="contacts-list">
+                <li class="contacts-list__item">
+                    <h4 class="title">Адрес</h4>
+                    <address class="text">{{ contacts.city }}, {{ contacts.address }}</address>
+                </li>
+                <li class="contacts-list__item">
+                    <h4 class="title">Телефон</h4>
+                    <a  class="text" href="tel:{{ contacts.phone }}">8 (495) 444-888-5</a>
+                </li>
+                <li class="contacts-list__item">
+                    <h4 class="title">График работы</h4>
+                    <p class="text">{{ contacts.tabletime }}</p>
+                </li>
+                <li class="contacts-list__item">
+                    <button aria-label="Кнопка Написать нам" class="btn btn__fill btn__send">
+                        Написать нам
+                    </button>
+                </li>
+            </ul>
+            
+        </div>
+    </div>
+</section>
 {% endblock content %}
