@@ -2,14 +2,12 @@ from garpix_page.models import BasePage
 from django.db import models
 
 from .contact_page import ContactPage
-# from .category_page import ProductsCategoryPage
 from .brands_page import BrandsPage
 
 from random import sample
 
 
 class ProductPage(BasePage):
-    # category = models.ForeignKey(ProductsCategoryPage, on_delete=models.CASCADE)
     brands = models.ForeignKey(BrandsPage, on_delete=models.CASCADE)
 
     name = models.CharField(verbose_name="Продукт", max_length=128)
