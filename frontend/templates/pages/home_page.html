@@ -154,14 +154,10 @@
                 <a class="btn btn__stroke" href="#">Смотреть все</a>    
             </div>
             <ul class="brands-list">
-                <li class="brands-list__item"><a href="#"><img src="{% static 'img/samsung-logo.png' %}" alt="samsung"></a></li>
-                <li class="brands-list__item"><a href="#"><img src="{% static 'img/oral-b-logo.png' %}" alt="Oral-B"></a></li>
-                <li class="brands-list__item"><a href="#"><img src="{% static 'img/lg-logo.png' %}" alt="LG"></a></li>
-                <li class="brands-list__item"><a href="#"><img src="{% static 'img/apple-logo.png' %}" alt="Apple"></a></li>
-                <li class="brands-list__item"><a href="#"><img src="{% static 'img/apc-logo.png' %}" alt="APC"></a></li>
-                <li class="brands-list__item"><a href="#"><img src="{% static 'img/xiaomi-logo.png' %}" alt="Xiaomi"></a></li>
-                <li class="brands-list__item"><a href="#"><img src="{% static 'img/lg-oled-logo.png' %}" alt="LG OLED"></a></li>
-                <li class="brands-list__item"><a href="#"><img src="{% static 'img/digma-logo.png' %}" alt="DIGMA"></a></li>
+                {% for brand in brands %}
+                {{ brands.image.url }}
+                <li class="brands-list__item"><a href="#"><img src="{{ brand.image.url }}" alt="{{ brand.name }}"></a></li>
+                {% endfor %}
             </ul>
         </div>
     </section>
@@ -234,15 +230,15 @@
                 <ul class="contacts-list">
                     <li class="contacts-list__item">
                         <h4 class="title">Адрес</h4>
-                        <address class="text">г.{{ address.city }}, {{ address.address }}</address>
+                        <address class="text">{{ contacts.city }}, {{ contacts.address }}</address>
                     </li>
                     <li class="contacts-list__item">
                         <h4 class="title">Телефон</h4>
-                        <a  class="text" href="tel:{{ address.phone }}">8 (495) 444-888-5</a>
+                        <a  class="text" href="tel:{{ contacts.phone }}">8 (495) 444-888-5</a>
                     </li>
                     <li class="contacts-list__item">
                         <h4 class="title">График работы</h4>
-                        <p class="text">{{ address.tabletime }}</p>
+                        <p class="text">{{ contacts.tabletime }}</p>
                     </li>
                     <li class="contacts-list__item">
                         <button aria-label="Кнопка Написать нам" class="btn btn__fill btn__send">

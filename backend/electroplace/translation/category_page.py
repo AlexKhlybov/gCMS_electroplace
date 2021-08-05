@@ -1,7 +1,7 @@
 from modeltranslation.translator import TranslationOptions, register
-from ..models import ProductsCategory
+from ..models import ProductsCategoryPage
 
 
-@register(ProductsCategory)
+@register(ProductsCategoryPage)
 class CategoryPageTranslationOptions(TranslationOptions):
     pass

@@ -1,6 +1,11 @@
 from .contact_page import ContactPageAdmin
 from .home_page import HomePageAdmin
 from .catalog_page import CatalogPageAdmin
-from .brands_page import BrandsPageAdmin
 from .category_page import CategoryPageAdmin
 from .product_page import ProductPageAdmin
+from .brands_page import BasePageAdmin
+from .news_page import NewsPageAdmin
+from .news_list_page import NewsListPageAdmin
+
+from .promo_slider import PromoSliderAdmin
+from .benefits import BenefitsAdmin

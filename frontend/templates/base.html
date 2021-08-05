@@ -28,7 +28,7 @@
                     <li class="header-top__item"><a href="#">Магазины</a></li>
                     <li class="header-top__item"><a href="#">Доставка  и оплата</a></li>
                     <li class="header-top__item"><a href="#">Кредиты и рассрочка</a></li>
-                    <li class="header-top__item"><a href="tel:{{ address.phone }}">8 (495) 444-888-5</a></li>
+                    <li class="header-top__item"><a href="tel:{{ contacts.phone }}">8 (495) 444-888-5</a></li>
                 </ul>
             </div>
         </div>
@@ -73,7 +73,7 @@
                 <section>
                     <h2 class="visuality-hidden">Наш адрес</h2>
                     <a href="#"><img class="logo" src="{% static 'img/Logo.svg' %}" alt="logo"></a>
-                    <address>г.{{ address.city }}, {{ address.address }}</address>
+                    <address>{{ contacts.city }}, {{ contacts.address }}</address>
                 </section>
                 <section>
                     <h2 class="visuality-hidden">Разделы сайта</h2>
@@ -83,7 +83,6 @@
                         <li><a href="#">Покупателям</a></li>
                         <li><a href="#">Информация</a></li>
                         <li><a href="#">Доставка</a></li>
-                    
                     </ul>
                 </section>
                 <section>

@@ -2,14 +2,14 @@ from garpix_page.models import BasePage
 from django.db import models
 
 from .contact_page import ContactPage
-from .category_page import ProductsCategory
+from .category_page import ProductsCategoryPage
 from .brands_page import BrandsPage
 
 from random import sample
 
 
 class ProductPage(BasePage):
-    category = models.ForeignKey(ProductsCategory, on_delete=models.CASCADE)
+    category = models.ForeignKey(ProductsCategoryPage, on_delete=models.CASCADE)
     brands = models.ForeignKey(BrandsPage, on_delete=models.CASCADE)
 
     name = models.CharField(verbose_name="Продукт", max_length=128)
@@ -25,7 +25,7 @@ class ProductPage(BasePage):
     is_stock = models.BooleanField(verbose_name="В акции", db_index=True, default=False)
     is_new = models.BooleanField(verbose_name="Новинка", db_index=True, default=False)
 
-    template = 'pages/home_page.html'
+    template = 'pages/product_page.html'
 
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
