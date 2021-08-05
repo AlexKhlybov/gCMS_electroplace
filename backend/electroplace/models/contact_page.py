@@ -11,6 +11,11 @@ class ContactPage(BasePage):
 
     template = 'pages/contact_page.html'
 
+    def get_context(self, request=None, *args, **kwargs):
+        context = super().get_context(request=request, *args, **kwargs)
+        context['contacts'] = ContactPage.objects.all().first()
+        return context
+
     class Meta:
         verbose_name = "Контакт"
         verbose_name_plural = "Контакты"

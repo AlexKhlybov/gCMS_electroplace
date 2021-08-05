@@ -14,7 +14,7 @@ class NewsPage(BasePage):
 
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
-        context['address'] = ContactPage.objects.all().first()
+        context['contacts'] = ContactPage.objects.all().first()
         return context
 
     class Meta:

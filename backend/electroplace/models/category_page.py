@@ -2,6 +2,7 @@ from django.db import models
 
 from garpix_page.models import BasePage
 from .contact_page import ContactPage
+from .product_page import ProductPage
 
 
 class ProductsCategoryPage(BasePage):
@@ -12,7 +13,8 @@ class ProductsCategoryPage(BasePage):
 
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
-        context['address'] = ContactPage.objects.all().first()
+        context['contacts'] = ContactPage.objects.all().first()
+        context['products'] = ProductPage.on_site.filter(is_active=True, parent=kwargs['object'])
         return context
 
     class Meta:
