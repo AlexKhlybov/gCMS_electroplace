@@ -1,6 +1,7 @@
 from django.db import models
 
 from garpix_page.models import BasePage
+from .contact_page import ContactPage
 
 
 class ProductsCategoryPage(BasePage):
@@ -8,6 +9,11 @@ class ProductsCategoryPage(BasePage):
     desc_category = models.TextField(verbose_name="Описание", blank=True)
 
     template = 'pages/category_page.html'
+
+    def get_context(self, request=None, *args, **kwargs):
+        context = super().get_context(request=request, *args, **kwargs)
+        context['address'] = ContactPage.objects.all().first()
+        return context
 
     class Meta:
         verbose_name = "Категория"
