@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from ..models.brands_page import BrandsPage
+from ..models.brand_page import BrandPage
 
 from garpix_page.admin import BasePageAdmin
 
 
-@admin.register(BrandsPage)
-class BrandsAdmin(BasePageAdmin):
+@admin.register(BrandPage)
+class BrandPageAdmin(BasePageAdmin):
     pass

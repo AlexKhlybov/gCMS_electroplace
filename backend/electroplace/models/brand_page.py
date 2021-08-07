@@ -5,7 +5,7 @@ from garpix_page.models import BasePage
 from .contact_page import ContactPage
 
 
-class BrandsPage(BasePage):
+class BrandPage(BasePage):
     name = models.CharField(verbose_name="Название", max_length=32, unique=True)
     desc_brands = models.TextField(verbose_name="Описание", blank=True)
     image = models.ImageField(upload_to="Изображение", blank=True)
@@ -26,7 +26,7 @@ class BrandsPage(BasePage):
 
     @staticmethod
     def get_item(pk):
-        return get_object_or_404(BrandsPage, pk=pk)
+        return get_object_or_404(BrandPage, pk=pk)
 
     def delete(self):
         self.is_active = False

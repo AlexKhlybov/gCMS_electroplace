@@ -2,12 +2,12 @@ from django.db import models
 from django.shortcuts import get_object_or_404
 from django.utils import timezone
 
-from .brands_page import BrandsPage
+from .brand_page import BrandPage
 
 
 class PromoSlider(models.Model):
     name = models.CharField(verbose_name="Название", max_length=256)
-    brand = models.ForeignKey(BrandsPage, on_delete=models.CASCADE)
+    brand = models.ForeignKey(BrandPage, on_delete=models.CASCADE)
     sort_desc = models.CharField(verbose_name="Короткое описание", max_length=256)
     image = models.ImageField(upload_to="Изображение", blank=True)
     is_active = models.BooleanField(verbose_name="Активный", db_index=True, default=True)

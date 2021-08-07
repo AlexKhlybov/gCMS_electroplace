@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+    
+    {% for brand in brands %}
+
+        {{ brand.name }}
+        
+    {% endfor %}
+        
+
+{% endblock content %}

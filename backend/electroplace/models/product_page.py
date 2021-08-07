@@ -2,13 +2,13 @@ from garpix_page.models import BasePage
 from django.db import models
 
 from .contact_page import ContactPage
-from .brands_page import BrandsPage
+from .brand_page import BrandPage
 
 from random import sample
 
 
 class ProductPage(BasePage):
-    brands = models.ForeignKey(BrandsPage, on_delete=models.CASCADE)
+    brand = models.ForeignKey(BrandPage, on_delete=models.CASCADE)
 
     name = models.CharField(verbose_name="Продукт", max_length=128)
     image = models.ImageField(upload_to="Изображение", blank=True)

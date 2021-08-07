@@ -1,7 +1,7 @@
 from modeltranslation.translator import TranslationOptions, register
-from ..models import BrandsPage
+from ..models import BrandPage
 
 
-@register(BrandsPage)
+@register(BrandPage)
 class BrandsPageTranslationOptions(TranslationOptions):
     pass

@@ -4,6 +4,7 @@ from .catalog_page import CatalogPageAdmin
 from .category_page import CategoryPageAdmin
 from .product_page import ProductPageAdmin
 from .brands_page import BasePageAdmin
+from .brands_list_page import BrandListPageAdmin
 from .news_page import NewsPageAdmin
 from .news_list_page import NewsListPageAdmin
 

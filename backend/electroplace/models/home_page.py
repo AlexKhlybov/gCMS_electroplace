@@ -2,7 +2,7 @@ from garpix_page.models import BasePage
 from django.db import models
 
 from .contact_page import ContactPage
-from .brands_page import BrandsPage
+from .brand_page import BrandPage
 from .promo_slider import PromoSlider
 from .benefits import Benefits
 
@@ -13,7 +13,7 @@ class HomePage(BasePage):
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
         context['contacts'] = ContactPage.objects.all().first()
-        context['brands'] = BrandsPage.objects.all()
+        context['brands'] = BrandPage.objects.all()
         context['promo'] = PromoSlider.objects.filter(is_active=True).all()
         context['benefits'] = Benefits.objects.all()
         return context
