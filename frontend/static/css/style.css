@@ -1480,3 +1480,16 @@ select:focus {
   color: #838383;
   margin-right: 5px;
 }
+
+.news__title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000;
+}
+
+.news__subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #636363;
+}
+
