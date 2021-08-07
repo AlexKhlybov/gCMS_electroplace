@@ -147,36 +147,18 @@
                 <a class="btn btn__stroke" href="#">Смотреть все</a>
             </div>
             <ul class="news-list">
-                <li class="news-list__item ">
-                    <h3 class="title">Бренд BLOODY представил мышь W60 Pro</h3>
-                    <p class="subtitle">Популярный бренд компьютерных аксессуаров</p>
+                <li class="news-list__item" style="background: url('{{ top_news.image.url }}') center no-repeat #000;">
+                    <h3 class="title">{{ top_news.title }}</h3>
+                    <p class="subtitle">{{ top_news.subtitle }}</p>
                     <a  class="btn" href="#">Подробнее</a>
                 </li>
-
-                <li class="news-list__item ">
-                    <h3 class="title">Плата asus</h3>
+                
+                {% for el in news %}
+                <li class="news-list__item" style="background: url('{{ el.image.url }}') center no-repeat #000;">
+                    <h3 class="title">{{ el.title }}</h3>
                     <a  class="btn" href="#">Подробнее</a>
                 </li>
-
-                <li class="news-list__item ">
-                    <h3 class="title">Системный блок acer</h3>
-                    <a  class="btn" href="#">Подробнее</a>
-                </li>
-
-                <li class="news-list__item  ">
-                    <h3 class="title">Планшет samsung</h3>
-                    <a  class="btn" href="#">Подробнее</a>
-                </li>
-
-                <li class="news-list__item ">
-                    <h3 class="title">Новые наушники Razer</h3>
-                    <a class="btn"  href="#">Подробнее</a>
-                </li>
-
-                <li class="news-list__item ">
-                    <h3 class="title">Мультипекарь Redmond плюс</h3>
-                    <a  class="btn" href="#">Подробнее</a>
-                </li>
+                {% endfor %}
             </ul>
         </div>
     </section>
@@ -184,18 +166,12 @@
         <div class="container">
             <h2 class="section-title">Преимущества</h2>
             <ul class="features-list">
-                <li class="features-list__item">
-                    <h4 class="title">Простая и удобная система заказа товара</h4>
-                    <p class="text">Мы знаем, как важна простая система регистрации и оформления заказа, поэтому делаем все для того, чтобы оформить заказ было удобно (и быстро!).</p>
-                </li>
-                <li class="features-list__item">
-                    <h4 class="title">Оповещаем о состоянии заказа по SMS</h4>
-                    <p class="text">Для тех, кто всегда хочет быть в курсе: вы сами можете контролировать свой заказ, получая статус о его формировании посредством sms-сообщений.</p>
-                </li>
-                <li class="features-list__item">
-                    <h4 class="title">Оперативная доставка</h4>
-                    <p class="text">Мы привыкли работать с большими объемами заказов, поэтому вам не стоит беспокоиться о том, что ваш заказ будет обработан не вовремя. lorem500</p>
-                </li>
+                {% for el in benefits %}
+                    <li class="features-list__item">
+                        <h4 class="title">{{ el.title }}</h4>
+                        <p class="text">{{ el.desc }}</p>
+                    </li>
+                {% endfor %}
             </ul>
         </div>
     </section>

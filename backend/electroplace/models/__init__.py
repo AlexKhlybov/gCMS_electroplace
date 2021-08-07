@@ -9,5 +9,6 @@ from .brand_page import BrandPage
 from .brand_list_page import BrandListPage
 
 from .promo_slider import PromoSlider
+from .promo_page import PromoPage
 from .benefits import Benefits
 

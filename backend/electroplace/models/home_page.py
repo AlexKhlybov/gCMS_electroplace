@@ -4,6 +4,7 @@ from django.db import models
 from .contact_page import ContactPage
 from .brand_page import BrandPage
 from .promo_slider import PromoSlider
+from .news_page import NewsPage
 from .benefits import Benefits
 
 
@@ -15,6 +16,8 @@ class HomePage(BasePage):
         context['contacts'] = ContactPage.objects.all().first()
         context['brands'] = BrandPage.objects.all()
         context['promo'] = PromoSlider.objects.filter(is_active=True).all()
+        context['top_news'] = NewsPage.objects.all().first()
+        context['news'] = NewsPage.objects.all().exclude(id=context["top_news"].id)
         context['benefits'] = Benefits.objects.all()
         return context
 
