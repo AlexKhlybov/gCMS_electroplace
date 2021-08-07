@@ -3,7 +3,7 @@
     <ul class="header-nav__list">
         {% for menu_item in menu %}
         <li class="header-nav__item">
-            <a class="{% if menu_item.is_current %}active{% endif %}" aria-current="page"
+            <a class="{% if menu_item.is_current %}active{% endif %}" style="white-space: nowrap; font-size: 13px;" aria-current="page"
             {% if menu_item.target_blank %}target="_blank" {% endif %}
             href="{{ menu_item.get_link }}">{{ menu_item.title }}</a>
         </li>
