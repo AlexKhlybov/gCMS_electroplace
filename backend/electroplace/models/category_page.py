@@ -14,7 +14,10 @@ class ProductsCategoryPage(BasePage):
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
         context['contacts'] = ContactPage.objects.all().first()
-        context['products'] = ProductPage.on_site.filter(is_active=True, parent=kwargs['object'])
+        if not kwargs['object'].name == "Скидки":
+            context['products'] = ProductPage.on_site.filter(is_active=True, parent=kwargs['object'])
+        else:
+            context['products'] = ProductPage.objects.filter(is_active=True, is_stock=True).all()
         return context
 
     class Meta:

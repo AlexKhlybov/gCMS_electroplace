@@ -43,10 +43,9 @@
         <div class="container">
             <div class="title-wrapper">
                 <h2 class="section-title">Хиты продаж</h2>
-                <a class="btn btn__stroke" href="/catalog/">Смотреть все</a>
+                <a class="btn btn__stroke" href="/skidki/">Смотреть все</a>
             </div>
             <ul class="product-cards">
-                
                 {% for el in hits %}
                 <li class="product-card  {% if el.is_new %}new{% endif %}">
                     <button aria-label="Кнопка добавления в избранное" class="product-card__fav-btn">
