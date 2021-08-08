@@ -24,9 +24,6 @@ class HomePage(BasePage):
         else:
             context["news"] = list()
         context["benefits"] = Benefits.objects.all()
-        np = '84958764574'
-        context["phone"] = f'{np[:1]} ({np[1:4]}) {np[4:7]}-{np[7:9]}-{np[9:11]}'
-        print(context["phone"])
         return context
 
     class Meta:
