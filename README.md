@@ -1,6 +1,6 @@
-# GarpixCMS Empty Template
+# Electroplace on GarpixCMS
 
-Cookiecutter template for GarpixCMS == 1.0.0.
+Electronics store built using GarpixCRM.
 
 ## Install
 
@@ -34,7 +34,6 @@ pipenv shell
 
 ```
 docker-compose up -d
-python3 backend/manage.py makemigrations
 python3 backend/manage.py migrate
 python3 backend/manage.py createsuperuser
 ```
