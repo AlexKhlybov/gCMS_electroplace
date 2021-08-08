@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load tel_to %}
 
 {% block content %}
     <section class="main">
@@ -137,7 +138,7 @@
                     </li>
                     <li class="contacts-list__item">
                         <h4 class="title">Телефон</h4>
-                        <a  class="text" href="tel:{{ contacts.phone }}">8 (495) 444-888-5</a>
+                        <p class="text">{{ contacts.phone|tel_to }}</p>
                     </li>
                     <li class="contacts-list__item">
                         <h4 class="title">График работы</h4>

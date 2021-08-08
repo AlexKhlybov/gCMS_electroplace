@@ -45,5 +45,7 @@ class ProductPage(BasePage):
     @staticmethod
     def get_stock_products():
         product_stock = ProductPage.objects.filter(is_stock=True)
-        stock = sample(list(product_stock), 4)
-        return stock
+        if product_stock:
+            stock = sample(list(product_stock), 4)
+            return stock
+        return list()

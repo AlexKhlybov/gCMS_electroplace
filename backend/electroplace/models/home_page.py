@@ -19,8 +19,14 @@ class HomePage(BasePage):
         context["brands"] = BrandPage.objects.all()
         context["promo"] = PromoSlider.objects.filter(is_active=True).all()
         context["top_news"] = NewsPage.objects.all().first()
-        context["news"] = NewsPage.objects.all().exclude(id=context["top_news"].id)
+        if context["top_news"]:
+            context["news"] = NewsPage.objects.all().exclude(id=context["top_news"].id)
+        else:
+            context["news"] = list()
         context["benefits"] = Benefits.objects.all()
+        np = '84958764574'
+        context["phone"] = f'{np[:1]} ({np[1:4]}) {np[4:7]}-{np[7:9]}-{np[9:11]}'
+        print(context["phone"])
         return context
 
     class Meta:
