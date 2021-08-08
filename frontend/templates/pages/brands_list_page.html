@@ -4,7 +4,7 @@
 
 {% block content %}
     <div class="container  my-5">
-        {% for brand in brands %}
+        {% for brand in page_obj %}
             <div class="card mb-3">
                 <div class="row no-gutters">
                 <div class="col-md-4  d-flex">
@@ -22,5 +22,6 @@
                 </div>
             </div>
         {% endfor %}
+        {% include 'includes/pagination.html' %}
     </div>
 {% endblock content %}
