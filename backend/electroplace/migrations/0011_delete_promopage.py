@@ -6,13 +6,9 @@ from django.db import migrations
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('garpix_menu', '0002_auto_20210730_0021'),
-        ('garpix_page', '0001_initial'),
-        ('electroplace', '0010_promopage'),
+        ("garpix_menu", "0002_auto_20210730_0021"),
+        ("garpix_page", "0001_initial"),
+        ("electroplace", "0010_promopage"),
     ]
 
-    operations = [
-        migrations.DeleteModel(
-            name='PromoPage',
-        ),
-    ]
+    operations = [migrations.DeleteModel(name="PromoPage")]

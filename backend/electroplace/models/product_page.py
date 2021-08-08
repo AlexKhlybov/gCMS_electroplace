@@ -1,10 +1,10 @@
-from garpix_page.models import BasePage
-from django.db import models
-
-from .contact_page import ContactPage
-from .brand_page import BrandPage
-
 from random import sample
+
+from django.db import models
+from garpix_page.models import BasePage
+
+from .brand_page import BrandPage
+from .contact_page import ContactPage
 
 
 class ProductPage(BasePage):
@@ -23,17 +23,17 @@ class ProductPage(BasePage):
     is_stock = models.BooleanField(verbose_name="В акции", db_index=True, default=False)
     is_new = models.BooleanField(verbose_name="Новинка", db_index=True, default=False)
 
-    template = 'pages/product_page.html'
+    template = "pages/product_page.html"
 
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
-        context['contacts'] = ContactPage.objects.all().first()
+        context["contacts"] = ContactPage.objects.all().first()
         return context
 
     class Meta:
         verbose_name = "Товар"
         verbose_name_plural = "Товары"
-        ordering = ('-created_at',)
+        ordering = ("-created_at",)
 
     def __str__(self):
         return f"{self.name} {self.storage} {self.color}"
@@ -47,5 +47,3 @@ class ProductPage(BasePage):
         product_stock = ProductPage.objects.filter(is_stock=True)
         stock = sample(list(product_stock), 4)
         return stock
-
-    

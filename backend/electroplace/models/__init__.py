@@ -10,4 +10,3 @@ from .brand_list_page import BrandListPage
 
 from .promo_slider import PromoSlider
 from .benefits import Benefits
-

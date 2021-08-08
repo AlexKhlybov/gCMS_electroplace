@@ -1,5 +1,5 @@
-from garpix_page.models import BasePage
 from django.db import models
+from garpix_page.models import BasePage
 
 from .contact_page import ContactPage
 
@@ -10,14 +10,14 @@ class NewsPage(BasePage):
     text = models.TextField(verbose_name="Текст", blank=True)
     image = models.ImageField(upload_to="Изображение", blank=True)
 
-    template = 'pages/news_page.html'
+    template = "pages/news_page.html"
 
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
-        context['contacts'] = ContactPage.objects.all().first()
+        context["contacts"] = ContactPage.objects.all().first()
         return context
 
     class Meta:
         verbose_name = "Новость"
         verbose_name_plural = "Новости"
-        ordering = ('-created_at',)
+        ordering = ("-created_at",)

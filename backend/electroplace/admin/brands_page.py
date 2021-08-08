@@ -1,8 +1,7 @@
 from django.contrib import admin
+from garpix_page.admin import BasePageAdmin
 
 from ..models.brand_page import BrandPage
-
-from garpix_page.admin import BasePageAdmin
 
 
 @admin.register(BrandPage)

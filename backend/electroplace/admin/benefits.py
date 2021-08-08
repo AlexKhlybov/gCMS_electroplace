@@ -1,5 +1,6 @@
-from ..models.benefits import Benefits
 from django.contrib import admin
+
+from ..models.benefits import Benefits
 
 
 @admin.register(Benefits)
