@@ -12,5 +12,5 @@ def tel_to(np):
     Create link `tel:`
     """
     phone = ET.Element("a", {"href": f"tel:{np}"})
-    phone.text = f'{np[:1]} ({np[1:4]}) {np[4:7]}-{np[7:9]}-{np[9:11]}'
+    phone.text = f"{np[:1]} ({np[1:4]}) {np[4:7]}-{np[7:9]}-{np[9:11]}"
     return mark_safe(ET.tostring(phone, encoding="unicode"))
