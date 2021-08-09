@@ -11,7 +11,9 @@ class NewsListPage(BasePage):
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
         news_list = NewsPage.objects.filter(is_active=True).all()
+        from .catalog_page import CatalogPage
 
+        context["catalog"] = CatalogPage.objects.all().first()
         context["page_obj"] = ProductsCategoryPage.get_paginate_by(request, news_list, 4)
         context["contacts"] = ContactPage.objects.all().first()
         return context

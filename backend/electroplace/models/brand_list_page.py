@@ -11,7 +11,9 @@ class BrandListPage(BasePage):
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
         brands_list = BrandPage.objects.filter(is_active=True).all()
+        from .catalog_page import CatalogPage
 
+        context["catalog"] = CatalogPage.objects.all().first()
         context["page_obj"] = ProductsCategoryPage.get_paginate_by(request, brands_list, 6)
         context["contacts"] = ContactPage.objects.all().first()
         return context

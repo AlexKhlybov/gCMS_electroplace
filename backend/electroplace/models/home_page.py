@@ -13,6 +13,9 @@ class HomePage(BasePage):
 
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
+        from .catalog_page import CatalogPage
+
+        context["catalog"] = CatalogPage.objects.all().first()
         context["contacts"] = ContactPage.objects.all().first()
         context["hits"] = ProductPage.get_stock_products()
         context["brands"] = BrandPage.objects.all()

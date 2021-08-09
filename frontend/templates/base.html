@@ -30,7 +30,7 @@
                 <ul class="header-top__list">
                     <li class="header-top__item"><a href="#">Магазины</a></li>
                     <li class="header-top__item"><a href="#">Доставка и оплата</a></li>
-                    <li class="header-top__item"><a href="/moskva/">Контакты</a></li>
+                    <li class="header-top__item"><a href="{{ contacts.absolute_url }}">Контакты</a></li>
                     <li class="header-top__item">{{ contacts.phone|tel_to }}</li>
                 </ul>
             </div>
@@ -105,7 +105,7 @@
                 <div class="footer-copyright-wrapper">
                     
                     <div class="footer-copyright-wrapper__left">
-                        <p>© Electro place, 2003–2021</p>
+                        <p>{{ site_config.footer_copyright }}</p>
                         <a href="#">Политика обработки персональных данных</a>
                     </div>
                     <div class="footer-copyright-wrapper__right">

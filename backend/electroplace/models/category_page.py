@@ -14,6 +14,9 @@ class ProductsCategoryPage(BasePage):
 
     def get_context(self, request=None, *args, **kwargs):
         context = super().get_context(request=request, *args, **kwargs)
+        from .catalog_page import CatalogPage
+
+        context["catalog"] = CatalogPage.objects.all().first()
         context["contacts"] = ContactPage.objects.all().first()
         if not kwargs["object"].name == "Скидки":
             product_list = ProductPage.on_site.filter(is_active=True, parent=kwargs["object"])
