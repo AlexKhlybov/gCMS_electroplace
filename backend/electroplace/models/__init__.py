@@ -9,3 +9,4 @@ from .news_list_page import NewsListPage
 from .news_page import NewsPage
 from .product_page import ProductPage
 from .promo_slider import PromoSlider
+from .site_configuration import SiteConfiguration

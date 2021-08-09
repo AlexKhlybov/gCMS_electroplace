@@ -9,3 +9,4 @@ from .news_list_page import NewsListPageAdmin
 from .news_page import NewsPageAdmin
 from .product_page import ProductPageAdmin
 from .promo_slider import PromoSliderAdmin
+from .site_configuration import SingletonModelAdmin
