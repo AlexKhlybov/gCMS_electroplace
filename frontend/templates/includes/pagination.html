@@ -1,0 +1,23 @@
+<div class="pagination">
+    <span class="step-links">
+        <ul class="pagination__main  d-flex">
+
+            {% if page_obj.has_previous %}
+            <a href="?page={{ page_obj.previous_page_number }}">
+                <li class="pagination__prev"></li>
+            </a>
+            {% endif %}
+            {% for el in page_obj.paginator.page_range %}
+            <li class="pagination__li  mx-1">
+                <a class="pagination__page {% if page_obj.number == el %}pagination__page_active{% endif %}"
+                    href="?page={{ el }}">{{ el }}</a>
+            </li>
+            {% endfor%}
+            {% if page_obj.has_next %}
+            <a href="?page={{ page_obj.next_page_number }}">
+                <li class="pagination__next"></li>
+            </a>
+            {% endif %}
+        </ul>
+    </span>
+</div>

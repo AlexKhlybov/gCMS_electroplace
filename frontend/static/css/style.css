@@ -86,6 +86,13 @@ select:focus {
   outline: none;
 }
 
+/* Прописываем класс для адаптивных картинок */
+.img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
 .section-title {
   font-family: Roboto, sans-serif;
   font-weight: bold;
@@ -1453,3 +1460,36 @@ select:focus {
 .modal-dialog__backdrop .feedback-modal button[type=submit] {
   width: 100%;
 }
+
+.price {
+  font-size: 20px;
+  font-weight: 900;
+  color: #000;
+}
+
+.old__price {
+  font-size: 14px;
+  font-weight: 500;
+  color: rgb(85, 85, 85);
+  text-decoration: line-through;
+}
+
+.property__style {
+  font-size: 16px;
+  font-weight: 700;
+  color: #838383;
+  margin-right: 5px;
+}
+
+.news__title {
+  font-size: 24px;
+  font-weight: 900;
+  color: #000;
+}
+
+.news__subtitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #636363;
+}
+

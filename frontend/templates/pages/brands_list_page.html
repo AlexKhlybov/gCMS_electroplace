@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <div class="container  my-5">
+        {% for brand in page_obj %}
+            <div class="card mb-3">
+                <div class="row no-gutters">
+                <div class="col-md-4  d-flex">
+                    <div class="justify-content-center  align-items-center" style="margin: 0 auto; padding-top: 10px;">
+                        <img src="{{ brand.image.url }}" alt="{{ brand.name }}">
+                    </div>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                    <h5 class="card-title">{{ brand.name }}</h5>
+                    <p class="card-text">{{ brand.desc_brands }}</p>
+                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    </div>
+                </div>
+                </div>
+            </div>
+        {% endfor %}
+        {% include 'includes/pagination.html' %}
+    </div>
+{% endblock content %}

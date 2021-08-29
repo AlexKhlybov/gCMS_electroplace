@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container  my-5">
+    <div class="card mb-3">
+        <img src="{{ object.image.url }}" class="card-img-top" alt="{{ object.name }}">
+        <div class="card-body">
+          <h2 class="news__title  mb-3">{{ object.title_news }}</h2>
+          <h3 class="news__subtitle  mb-3">{{ object.subtitle }}</h3>
+          <p class="news__text  mb-3">{{ object.text }}</p>
+          <p class="card-text  mt-5  mb-3"><small class="text-muted">Последнее обновление: 3 мин. назад</small></p>
+        </div>
+      </div>
+</div>
+{% endblock content %}

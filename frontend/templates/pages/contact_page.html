@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load tel_to %}
+
+
+{% block content %}
+<section class="contacts">
+    <div class="container">
+        <h2 class="section-title">Контакты</h2>
+        <div class="content">
+            <ul class="contacts-list  mr-3">
+                <li class="contacts-list__item">
+                    <h4 class="title">Адрес</h4>
+                    <address class="text">{{ contacts.city }}, {{ contacts.address }}</address>
+                </li>
+                <li class="contacts-list__item">
+                    <h4 class="title">Телефон</h4>
+                    <p class="text">{{ object.phone|tel_to }}</p>
+                </li>
+                <li class="contacts-list__item">
+                    <h4 class="title">График работы</h4>
+                    <p class="text">{{ contacts.tabletime }}</p>
+                </li>
+                <li class="contacts-list__item">
+                    <button aria-label="Кнопка Написать нам" class="btn btn__fill btn__send">
+                        Написать нам
+                    </button>
+                </li>
+            </ul>
+            <div class="map">
+                <script  async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Ad72508a893ff8a62cb3a3262aa10230d9d2461efeebe2f367f99541fc70545f0&amp;width=670&amp;height=350&amp;lang=ru_RU&amp;scroll=false"></script>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}

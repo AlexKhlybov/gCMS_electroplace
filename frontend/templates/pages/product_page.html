@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="container my-5">
+    <div class="card  mb-3  py-3" style="height: 300px;">
+        <div class="row no-gutters">
+
+            <div class="col-md-6 d-flex justify-content-center">
+                <img class="img" src="{{ object.image.url }}" alt="{{ object.name }}">
+            </div>
+
+            <div class="col-md-6">
+                <div class="card-body">
+                    <h5 class="card-title">{{ object.name }}</h5>
+                    <div class="d-flex  mb-2">
+                        <p class="price  mr-3">{{ object.price }}</p>
+                        <p class="old__price">{% if object.old_price %}{{ object.old_price }}{% endif %}</p>
+                    </div>
+                    {% if object.color %}<p><span class="property__style">Цвет:</span>{{ object.color }}</p>{% endif %}
+                    {% if object.parent.name == "Смартфоны" %}
+                        <p><span class="property__style">Экран:</span>{{ object.screen }}</p>
+                        <p><span class="property__style">Кол-во сим-карт:</span>{{ object.sim }}</p>
+                        <p><span class="property__style">Хранилище:</span>{{ object.storage }}</p>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
